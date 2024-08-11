@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Affiliate Form </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Become an affiliate today!</h1>
+      <p id="Pargrph">But first, we'd like to get to know you better.</p>
+
+      <form id="affiliateForm" name="affiliateForm">
+        <label for="first-name">First Name <span>*</span></label>
+        <input type="text" id="first-name" name="first-name" onsubmit="return CheckForm()" method="post" />
+        <p id="FCorrection">First name must be 3-50 characters long and contain only letters.</p>
+
+        <label for="last-name">Last Name <span>*</span></label>
+        <input type="text" id="last-name"  name="last-name" onsubmit="return CheckForm()" method="post" />
+        <p id="LCorrection">last name must be 3-50 characters long and contain only letters.</p>
+
+
+        <label for="email">Email <span>*</span></label>
+        <input type="email" id="email" name="email" required />
+        <p id="ECorrection">Email must have @example.com</p>
+
+
+
+        <label for="username">Username <span>*</span></label>
+        <input type="text" id="username" name="username"  onsubmit="return CheckForm()" method="post"  />
+        <small>This username will be used to create your promo code.</small>
+        <p id="UCorrection">User Name mustn't have spaces.</p>
+
+
+        <label for="password">Password <span>*</span></label>
+        <input type="password" id="password" name="password" onsubmit="return CheckForm()" method="post" />
+        <p id="PCorrection">Password must be 3-50 Numbers.</p>
+
+
+        <label for="repeat-password">Repeat Password <span>*</span></label>
+        <input type="password" id="repeat-password" name="repeat-password" onsubmit="return CheckForm()" method="post" />
+        <p id="RCorrection">Password Must be Identical.</p>
+
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="agreement" name="agreement" onsubmit="return CheckForm()" method="post" />
+          <label for="agreement"></label>
+          I have read and agreed to V.connect's 
+          <a href="#">affiliate agreement</a>,
+          <a href="#">privacy policy</a> and
+          <a href="#">terms of service</a>.
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
